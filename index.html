@@ -1,167 +1,358 @@
 ﻿<!DOCTYPE HTML>
 
+
+
+
+
 <html>
 	<head>
+
         <style>
-            p1 
-            {
-               margin-left: 100px;
-               margin-right: 100px;
-               display:inline-block;
+            body {
+                background-image: url('images/background_2.jpg');
+            }
+
+            p {
+                text-align: center;
+                line-height: 1.8;
+                color: white;
+                font-size: 18px;
+            }
+
+            p1 {
+                margin-left: 80px;
+                margin-right: 80px;
+                display: inline-block;
+                text-align: center;
+                line-height: 1.8;
+                color: white;
+                font-size: 18px;
+            }
+
+            h1 {
+                text-align: center;
+                color: white;
+                display: block;
+                font-size: 48px;
+                padding-bottom: 20px;
             }
 
 
+            h4 {
+                text-align: center;
+                color: white;
+                display: block;
+                font-size: large;
+            }
+
+            h2 {
+                padding-top: 200px;
+                text-align: center;
+                color: white;
+            }
+
+            a:link {
+                color: darkorange;
+                background-color: transparent;
+                text-decoration: none;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            a:visited {
+                color: darkorange;
+                background-color: transparent;
+                text-decoration: none;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            a:hover {
+                color: darkorange;
+                background-color: transparent;
+                text-decoration: underline;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            a:active {
+                color: darkorange;
+                background-color: transparent;
+                text-decoration: underline;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                color: darkorange;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: transparent;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+                .dropdown-content a {
+                    color: white;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                    .dropdown-content a:hover {
+                        background-color: ButtonShadow;
+                    }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+
+
+
+
+            * {
+                box-sizing: border-box
+            }
+
+            body {
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            .mySlides {
+                display: none
+            }
+
+            img {
+                vertical-align: middle;
+            }
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+                /* On hover, add a black background color with a little bit see-through */
+                .prev:hover, .next:hover {
+                    background-color: rgba(0,0,0,0.8);
+                }
+
+            /* Caption text */
+            .text {
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 19px;
+                width: 100%;
+                text-align: center;
+                background-color: ThreeDDarkShadow;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+                .active, .dot:hover {
+                    background-color: #717171;
+                }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            @keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .prev, .next, .text {
+                    font-size: 11px
+                }
+            }
         </style>
 		<title>Cameron Maclean</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--<link rel="stylesheet" href="assets/css/main.css" />-->
 	</head>
-	<body class="is-preload">
-
-		<!-- Content -->
-        <div id="content">
-            <div class="inner">
-
-                <!-- Post -->
-                <article class="box post post-excerpt">
-                    <header>
-
-                        <h1><center>Cameron Maclean</center></h1>
-                        <p><center>This is a portfolio that quickly shows screenshots of my current and past work</center></p>
-                        <p>
-                            <center>
-                                To contact me, please email me at
-                                <a href="Mailto:cameronmaclean17@gmail.com">cameronmaclean17@gmail.com</a>
-                            </center>
-                        </p>
 
 
-
-                        <h1><center>Breath of The Coyote Unity Project</center></h1>
-
-                    </header>
-                    <!--<div class="info">
-        <!--
-            Note: The date should be formatted exactly as it's shown below. In particular, the
-            "least significant" characters of the month should be encapsulated in a <span>
-            element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
-            Oh, and if you don't need a date for a particular page or post you can simply delete
-            the entire "date" element.
-
-        -->
-                    <!--<span class="date"><span class="month">Jul<span>y</span></span> <span class="day">14</span><span class="year">, 2014</span></span>
-            <!--
-                Note: You can change the number of list items in "stats" to whatever you want.
-
-            <ul class="stats">
-                <li><a href="#" class="icon fa-comment">16</a></li>
-                <li><a href="#" class="icon fa-heart">32</a></li>
-                <li><a href="#" class="icon brands fa-twitter">64</a></li>
-                <li><a href="#" class="icon brands fa-facebook-f">128</a></li>
-            </ul>
-
-        </div> -->
-                    <p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/u0pYefzb31E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
-                    <p1>
-                        <center>
-                            Hello! I am a young programmer currently working on several side projects in both Unity and Unreal Engine 4. The above picture is from a game I made with several friends
-                            that won in a game competition hosted by my college, California State University San Bernardino. For this project, I created all of the visual effects shown and helped design the level,
-                            with my direct contributions on the level design being helping with the initial layout of the map, the creation of the clouds in the game and creating a layout for the different puzzles and tasks in the level.
-                            In addition, I worked on quite a bit of the code, including some of the movement and damage scripts, all of the visual effects scripts, and some of the sound in the game.
-                            <a href="https://github.com/plzrobbob/BreathOfTheCoyote">Here is the github to this particular project.</a>
-                        </center>
-                    </p1>
-
-                </article>
-
-                <!-- Post -->
-                <article class="box post post-excerpt">
-                    <header>
-                        <h2><center>Level Design examples</center></h2>
-                        <p>
-                            <center>
-                                A couple screenshots of levels I have designed completed. Most if not all of these examples are on my GitHub account in the several projects I have on there.
-                            </center>
-                        </p>
-                    </header>
-                    <!--
-    <div class="info">
-        <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">8</span><span class="year">, 2014</span></span>
-        <ul class="stats">
-            <li><a href="#" class="icon fa-comment">16</a></li>
-            <li><a href="#" class="icon fa-heart">32</a></li>
-            <li><a href="#" class="icon brands fa-twitter">64</a></li>
-            <li><a href="#" class="icon brands fa-facebook-f">128</a></li>
-        </ul>
-    </div>
-    -->
-                    <center>
-                        <img src="images/HighresScreenshot00003.png"
-                             alt="" style="height:440px;width:780px; border:0" />
-                    </center>
-                    <center>
-                        <img src="images/HighresScreenshot00001.png"
-                             alt="" style="height:440px;width:780px; border:0" />
-                    </center>
-                    <center>
-                        <img src="images/BOTC_Map_Screenshot.PNG"
-                             alt="" style="height:440px;width:780px; border:0" />
-                    </center>
-
-                </article>
-
-
-                <h1>
-                    <center>
-                        Media Connections
-                    </center>
-
-                </h1>
-
-
-                <p>
-                    <center>
-                        <a href="https://github.com/plzrobbob">
-                            <img src=" images/GitHub_Logo.png" alt="" style="width:60px; height:30px; border:0" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/cameron-maclean-047401196/">
-                            <img src=" images/LI-In-Bug.png" alt="" style="width:30px; height:24px; border:0" />
-                        </a>
-
-                    </center>
-                </p>
+    <body class="is-preload">
 
 
 
 
 
+        <h1>Cameron Maclean</h1>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <h4>
+            <a href="index.html">About Me</a>
+            |
+            <div class="dropdown">
+                <a href="PastWork.html">Past Projects</a>
+                <div class="dropdown-content">
+                    <a href="PastWork.html#BOTC">Breath of the Coyote</a>
+                    <a href="PastWork.html#20xx">Cyber Arena 3079</a>
+                    <a href="PastWork.html#Carnage">Carnage</a>
+                    <a href="PastWork.html#Level_Design">Level Design Screenshots</a>
+                </div>
             </div>
+            |
+            <a href="CurrentWork.html">Current Project</a>
+            |
+            <a href="Contact.html">Contact Me!</a>
+        </h4>
+
+
+
+        <h1>
+            About Me
+        </h1>
+
+        <center><img src="images/Me.jpg" width="300" height="400"></center>
+
+        <p1>
+            My name is Cameron Maclean, and I graduated from California State University San Bernardino in June 2020 with a Bachelor of Science in Computer Science. Growing up, I spent most of my time playing different sports
+            and was even in the Boy Scouts, reaching the rank of Life Scout before leaving to focus on High School football. Growing up I was constantly busy and had many different hobbies, with the most notable one being video games.
+            The one game that really got me into video games was Star Wars: Knights of the Old Republic 2, and my love for that game really puts a capstone on my affection for the RPG genre in general. I really didn't know what I wanted
+            to do for my future until I got to high school, where I was introduced to a programming class and instantly fell in love. Ever since that class I have pursued game development, specifically programming, and enjoying the challenge
+            that comes with it and the positive feeling when you solve these challenges.
+        </p1>
+        <pre>
+
+
+</pre>
+        <p1>
+            With my degree being in Computer Science, my biggest strengths when it comes to game development is my knowledge of programming and mathematics and my ability to try and translate parts of game development that I am weak with into concepts that I understand
+            and work well with. A great example for this is how I have learned Visual Effects in Unity. I am not as strong artistically as I am mathematically, so I looked at visual effects purely mathematically and would build these effects via formulas and other
+            concepts I understood much better so that I can actually implement something that looks and feels good.
+        </p1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
         </div>
 
-        </body>
+    </body>
     </html>
+
+
