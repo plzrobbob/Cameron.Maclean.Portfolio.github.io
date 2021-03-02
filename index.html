@@ -5,361 +5,481 @@
 
 
 <html>
-	<head>
+<head>
 
-        <style>
-            body {
-                background-image: url('images/background_2.jpg');
-                
-            }
+    <style>
 
-            p {
-                text-align: center;
-                line-height: 1.8;
-                color: white;
-                font-size: 18px;
-                font-family: 'Franklin Gothic';
-            }
+        @font-face {
+            font-family: 'cassanet';
+            src: url(assets/css/Fonts/cassannet_plus_regular-webfont-webfont.woff2) format('woff2'), url(assets/css/Fonts/cassannet_plus_regular-webfont-webfont.woff) format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            background-color: #505050;
+            margin: 0px;
+            font-family: 'cassanet';
+            font-family: ;
+        }
 
-            p1 {
-                margin-left: 80px;
-                margin-right: 80px;
-                display: inline-block;
-                text-align: center;
-                line-height: 1.8;
-                color: white;
-                font-size: 18px;
-                padding-bottom: 4em;
-                font-family: sans-serif;
-                font-family: 'Franklin Gothic';
-            }
-            p2 {
-                margin-left: 80px;
-                margin-right: 80px;
-                display: inline-block;
-                text-align: center;
-                line-height: 1.8;
-                color: white;
-                font-size: 18px;
-                padding-bottom: 20em;
-                font-family:'Franklin Gothic';
-            }
-            h1 {
-                text-align: center;
-                color: white;
-                display: block;
-                font-size: 48px;
-                padding-bottom: 20px;
-                font-family: 'Franklin Gothic';
-            }
+        p {
+            text-align: center;
+            line-height: 1.8;
+            color: white;
+            font-size: 18px;
+            font-family: 'cassanet';
+        }
+
+        .subbody {
+            margin-right: 370px;
+            margin-left: 370px;
+            background-color: #505050;
+            /*border-left: 8px solid #bbb;
+                border-right: 8px solid #bbb;
+                border-bottom: 8px solid #bbb;*/
+        }
+
+        p1 {
+            margin-left: 80px;
+            margin-right: 80px;
+            display: inline-block;
+            text-align: center;
+            line-height: 1.8;
+            color: white;
+            font-size: 18px;
+            padding-bottom: 4em;
+            font-family: sans-serif;
+            font-family: 'cassanet';
+        }
+
+        p2 {
+            margin-left: 80px;
+            margin-right: 80px;
+            display: inline-block;
+            text-align: center;
+            line-height: 1.8;
+            color: white;
+            font-size: 18px;
+            padding-bottom: 20em;
+            font-family: 'cassanet';
+        }
+
+        h1 {
+            /*text-align: center;*/
+            color: darkcyan;
+            display: block;
+            font-size: 60px;
+            padding-bottom: 20px;
+            font-family: 'cassanet';
+        }
+
+        .header {
+            background-color: transparent;
+            /*text-align: center;*/
+            /*padding: 5px;*/
+            margin-right: 0px;
+            margin-left: 0px;
+        }
 
 
-            h4 {
-                text-align: center;
-                color: white;
-                display: block;
-                font-size: large;
-                font-family: 'Franklin Gothic';
-            }
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 20px;
+            background-color: dimgrey;
+        }
 
-            h2 {
-                text-align: center;
-                color: white;
-                display: block;
-                font-size: 36px;
-                padding-bottom: 20px;
-                font-family: 'Franklin Gothic';
-            }
-            ul {
-                margin-left: 400px;
-                margin-right: 80px;
-                display: inline-block;
-                line-height: 1.8;
-                color: white;
-                font-size: 18px;
-                padding-bottom: 4em;
-                font-family: 'Franklin Gothic';
-            }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-            a:link {
-                color: darkorange;
-                background-color: transparent;
+        h6 {
+            text-align: right;
+            color: white;
+            display: block;
+            font-size: 28px;
+            border-bottom: 8px solid #bbb;
+            font-family: 'cassanet';
+            margin-bottom: 0px;
+        }
+
+        h4 {
+            text-align: center;
+            color: black;
+            display: block;
+            font-size: large;
+            font-family: 'cassanet';
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            display: block;
+            font-size: 36px;
+            padding-bottom: 20px;
+            font-family: 'cassanet';
+        }
+
+        ul {
+            margin-left: 300px;
+            margin-right: 80px;
+            display: inline-block;
+            line-height: 1.8;
+            color: white;
+            font-size: 18px;
+            padding-bottom: 4em;
+            font-family: 'cassanet';
+        }
+
+        a:link {
+            color: darkcyan;
+            background-color: transparent;
+            text-decoration: none;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-family: 'cassanet';
+        }
+
+        a:visited {
+            color: darkcyan;
+            background-color: transparent;
+            text-decoration: none;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-family: 'cassanet';
+        }
+
+        a:hover {
+            color: darkcyan;
+            background-color: transparent;
+            text-decoration: underline;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-family: 'cassanet';
+        }
+
+        a:active {
+            color: darkcyan;
+            background-color: transparent;
+            text-decoration: underline;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-family: 'cassanet';
+        }
+
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            /*padding: 16px;*/
+            font-size: 16px;
+            border: none;
+            font-family: 'cassanet';
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            color: darkcyan;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: ButtonShadow;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            text-align: center;
+            z-index: 1;
+            font-family: 'cassanet';
+        }
+
+            .dropdown-content a {
+                color: white;
+                padding: 12px 16px;
                 text-decoration: none;
-                padding-left: 5px;
-                padding-right: 5px;
-                font-family: 'Franklin Gothic';
-            }
-
-            a:visited {
-                color: darkorange;
-                background-color: transparent;
-                text-decoration: none;
-                padding-left: 5px;
-                padding-right: 5px;
-                font-family: 'Franklin Gothic';
-            }
-
-            a:hover {
-                color: darkorange;
-                background-color: transparent;
-                text-decoration: underline;
-                padding-left: 5px;
-                padding-right: 5px;
-                font-family: 'Franklin Gothic';
-            }
-
-            a:active {
-                color: darkorange;
-                background-color: transparent;
-                text-decoration: underline;
-                padding-left: 5px;
-                padding-right: 5px;
-                font-family: 'Franklin Gothic';
-            }
-
-
-            .dropbtn {
-                background-color: #4CAF50;
-                color: white;
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-                font-family: 'Franklin Gothic';
-            }
-
-            .dropdown {
-                position: relative;
-                display: inline-block;
-                color: darkorange;
-                background-color: transparent;
-                text-decoration: none;
-            }
-
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: ButtonShadow;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-                font-family: 'Franklin Gothic';
-            }
-
-                .dropdown-content a {
-                    color: white;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                    font-family: 'Franklin Gothic';
-                }
-
-                    .dropdown-content a:hover {
-                        background-color: black;
-                    }
-
-            .dropdown:hover .dropdown-content {
                 display: block;
+                font-family: 'cassanet';
             }
 
-            .dropdown:hover .dropbtn {
-                background-color: #3e8e41;
-            }
-
-
-
-
-            * {
-                box-sizing: border-box
-            }
-
-            body {
-                font-family: 'Franklin Gothic';
-            }
-
-            .mySlides {
-                display: none
-            }
-
-            img {
-                vertical-align: middle;
-            }
-
-            /* Slideshow container */
-            .slideshow-container {
-                max-width: 1000px;
-                position: relative;
-                margin: auto;
-            }
-
-            /* Next & previous buttons */
-            .prev, .next {
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                width: auto;
-                padding: 16px;
-                margin-top: -22px;
-                color: white;
-                font-weight: bold;
-                font-size: 18px;
-                transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
-                font-family: 'Franklin Gothic';
-            }
-
-            /* Position the "next button" to the right */
-            .next {
-                right: 0;
-                border-radius: 3px 0 0 3px;
-            }
-
-                /* On hover, add a black background color with a little bit see-through */
-                .prev:hover, .next:hover {
-                    background-color: rgba(0,0,0,0.8);
+                .dropdown-content a:hover {
+                    background-color: black;
                 }
 
-            /* Caption text */
-            .text {
-                color: #f2f2f2;
-                font-size: 15px;
-                padding: 8px 12px;
-                position: absolute;
-                bottom: 19px;
-                width: 100%;
-                text-align: center;
-                background-color: ThreeDDarkShadow;
-                font-family: 'Franklin Gothic';
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+
+
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'cassanet';
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+            overflow: hidden;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            font-family: 'cassanet';
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
             }
 
-            /* Number text (1/3 etc) */
-            .numbertext {
-                color: #f2f2f2;
-                font-size: 12px;
-                padding: 8px 12px;
-                position: absolute;
-                top: 0;
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 19px;
+            width: 100%;
+            text-align: center;
+            background-color: ThreeDDarkShadow;
+            font-family: 'cassanet';
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            font-family: 'cassanet';
+        }
+
+            .active, .dot:hover {
+                background-color: #717171;
             }
 
-            /* The dots/bullets/indicators */
-            .dot {
-                cursor: pointer;
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.6s ease;
-                font-family: 'Franklin Gothic';
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
             }
 
-                .active, .dot:hover {
-                    background-color: #717171;
-                }
+            to {
+                opacity: 1
+            }
+        }
 
-            /* Fading animation */
-            .fade {
-                -webkit-animation-name: fade;
-                -webkit-animation-duration: 1.5s;
-                animation-name: fade;
-                animation-duration: 1.5s;
+        @keyframes fade {
+            from {
+                opacity: .4
             }
 
-            @-webkit-keyframes fade {
-                from {
-                    opacity: .4
-                }
-
-                to {
-                    opacity: 1
-                }
+            to {
+                opacity: 1
             }
+        }
 
-            @keyframes fade {
-                from {
-                    opacity: .4
-                }
-
-                to {
-                    opacity: 1
-                }
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .prev, .next, .text {
+                font-size: 11px
             }
+        }
 
-            /* On smaller screens, decrease text size */
-            @media only screen and (max-width: 300px) {
-                .prev, .next, .text {
-                    font-size: 11px
-                }
-            }
-        </style>
-		<title>Cameron Maclean</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	</head>
+
+        .container {
+            position: relative;
+            overflow: hidden;
+            max-height: 300px;
+            font-family: 'cassanet';
+            padding-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .text-block {
+            position: absolute;
+            bottom: 20px;
+            /*display:inline-block;*/
+            left: 10%;
+            background-color: darkcyan;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-size: 10px 10px;
+            user-select: none;
+            font-family: 'cassanet';
+        }
+
+        .crop {
+            /*margin-top: -80px;*/
+        }
+        .sidebar {
+            float: left;
+            width: 600px;
+            height: 600px;
+        }
+        .para {
+            padding-top:2em;
+            margin-left: 20%;
+            margin-right: 20%;
+            text-align: center;
+            line-height: 1.8;
+            color: white;
+            font-size: 18px;
+            font-family: 'cassanet';
+        }
+    </style>
+    <title>Cameron Maclean</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
 
 
     <body class="is-preload">
 
 
 
+        <div class="header">
+            <h1>
 
-
-        <h1>Cameron Maclean</h1>
-
-
-
-        <h4>
-            <a href="index.html">About Me</a>
-            |
-            <div class="dropdown">
-                <a href="PastWork.html">Past Projects</a>
-                <div class="dropdown-content">
-                    <a href="PastWork.html#BOTC">Breath of the Coyote</a>
-                    <a href="PastWork.html#20xx">Cyber Arena 3079</a>
-                    <a href="PastWork.html#Carnage">Carnage</a>
-                    <a href="PastWork.html#Level_Design">Level Design Screenshots</a>
+                <a href="index.html">
+                    Cameron Maclean
+                </a>
+            </h1>
+            <h6>
+                <a href="AboutMe.html">About Me</a>
+                |
+                <div class="dropdown">
+                    <a href="PastWork.html">Past Projects</a>
+                    <div class="dropdown-content">
+                        <a href="PastWork.html#BOTC">Breath of the Coyote</a>
+                        <a href="PastWork.html#20xx">Cyber Arena 3079</a>
+                        <a href="PastWork.html#Carnage">Carnage</a>
+                        <a href="PastWork.html#Level_Design">Level Design Screenshots</a>
+                    </div>
                 </div>
+                |
+                <a href="CurrentWork.html">Current Project</a>
+                |
+                <a href="Contact.html">Contact Me!</a>
+            </h6>
+        </div>
+
+        <div class="para">
+            Hello! I am a game developer that focuses on gameplay programming. I also have experience working as a project manager, with my latest example being my current project with friends, Yard Wars!
+            Hope you take a look and I can't wait to have you try it!
+        </div>
+        <!--<div class="subbody">-->
+
+            <div class="container">
+
+
+
+
+                <a href="CurrentWork.html">
+                    <div class="crop">
+                        <center><img src="images/YW_Screenshot_3_wide.png" alt="Nature" style="width:95%; height:500px; position:relative; object-fit:cover; "></center>
+                    </div>
+                    <div class="text-block">
+                        <h4>Yard Wars</h4>
+                    </div>
+                </a>
             </div>
-            |
-            <a href="CurrentWork.html">Current Project</a>
-            |
-            <a href="Contact.html">Contact Me!</a>
-        </h4>
 
 
-
-        <h1>
-            About Me
-        </h1>
-
-        <center><img src="images/Me.jpg" width="300" height="400"></center>
-
-        <p1>
-            My name is Cameron Maclean, and I graduated from California State University San Bernardino in June 2020 with a Bachelor of Science in Computer Science. Growing up, I spent most of my time playing different sports
-            and was even in the Boy Scouts, reaching the rank of Life Scout before leaving to focus on High School football. Growing up I was constantly busy and had many different hobbies, with the most notable one being video games.
-            The one game that really got me into video games was Star Wars: Knights of the Old Republic 2, and my love for that game really puts a capstone on my affection for the RPG genre in general. I really didn't know what I wanted
-            to do for my future until I got to high school, where I was introduced to a programming class and instantly fell in love. Ever since that class I have pursued game development, specifically programming, and enjoying the challenge
-            that comes with it and the positive feeling when you solve these challenges.
-        </p1>
-        <h2>Key Skills</h2>
-        <ul>
-            <li>C# Programming</li>
-            <li>C++ Programming</li>
-            <li>Mobile Game development</li>
-            <li>Have handled several Project Management Roles</li>
-            <li>3D Game development</li>
-            <li>Experience with both Unity Engine and Unreal Engine 4</li>
-        </ul>
+            <div class="container">
+                <a href="PastWork.html#BOTC">
+                    <div class="crop">
+                        <center><img src="images/BOTC_Map_Screenshot.png" alt="Nature" style="width:95%; height:350px; position:relative; object-fit:cover;"></center>
+                    </div>
+                    <div class="text-block">
+                        <h4>Breath of the Coyote</h4>
+                    </div>
+                </a>
+            </div>
 
 
-        <p2>
-            With my degree being in Computer Science, my biggest strengths when it comes to game development is my knowledge of programming and mathematics and my ability to try and translate parts of game development that I am weak with into concepts that I understand
-            and work well with. A great example for this is how I have learned Visual Effects in Unity. I am not as strong artistically as I am mathematically, so I looked at visual effects purely mathematically and would build these effects via formulas and other
-            concepts I understood much better so that I can actually implement something that looks and feels good. After I graduated from CSUSB, I have spent my free time trying to learn as many different focuses of game development to make sure I have a good understanding of
-            whatever I need to work on to complete different games. Currently most of my time is devoted to my current project, Yard Wars, where I work with my friends as the project manager along with working on a lot of the gameplay programming. We are hoping to have a full demo ready
-            on April 6th, 2021.
-        </p2>
+            <div class="container">
+                <a href="PastWork.html#BOTC">
+                    <div class="crop">
+                        <center><img src="images/HighresScreenshot00001.png" alt="Nature" style="width:95%; height:400px; position:relative; object-fit:cover;"></center>
+                    </div>
+                    <div class="text-block">
+                        <h4>Level Design Screenshots</h4>
+                    </div>
+                </a>
+            </div>
+            <br />
+            <br />
+            <br />
+        <!--</div>-->
+
 
     </body>
     </html>
